@@ -1,0 +1,43 @@
+import java.util.Hashtable;
+
+public class Diccionario {
+
+    public static void main(String[] args) {
+        // Crea un Hashtable
+        Hashtable<String, String> diccionario = new Hashtable<>();
+
+        // Agrega 5 palabras al diccionario
+        diccionario.put("casa", "lugar donde se vive");
+        diccionario.put("perro", "animal doméstico");
+        diccionario.put("gato", "animal doméstico");
+        diccionario.put("árbol", "planta de gran tamaño");
+        diccionario.put("agua", "líquido incoloro");
+
+        // Imprime todos los elementos del diccionario
+        diccionario.forEach((palabra, significado) -> System.out.println(palabra + " - " + significado));
+    }
+}
+
+//ACTIVIDAD 2
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Hashtable;
+
+public class Agenda {
+
+    public static void main(String[] args) {
+        // Crea un Hashtable
+        Hashtable<String, Calendar> agenda = new Hashtable<>();
+
+        // Agrega 5 registros
+        agenda.put("Juan", new GregorianCalendar(1990, Calendar.JANUARY, 1));
+        agenda.put("María", new GregorianCalendar(1991, Calendar.FEBRUARY, 2));
+        agenda.put("Pedro", new GregorianCalendar(1992, Calendar.MARCH, 3));
+        agenda.put("Ana", new GregorianCalendar(1993, Calendar.APRIL, 4));
+        agenda.put("Luis", new GregorianCalendar(1994, Calendar.MAY, 5));
+
+        // Imprime todos los elementos de la agenda
+        agenda.forEach((nombre, cumpleaños) -> System.out.println(nombre + " - " + cumpleaños));
+    }
+}
